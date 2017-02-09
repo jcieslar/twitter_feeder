@@ -43,6 +43,9 @@ GEM
     arel (7.1.4)
     buftok (0.2.0)
     builder (3.2.3)
+    clockwork (2.0.0)
+      activesupport
+      tzinfo
     coderay (1.1.1)
     coffee-rails (4.2.1)
       coffee-script (>= 2.2.0)
@@ -52,6 +55,11 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.4)
+    delayed_job (4.1.2)
+      activesupport (>= 3.0, < 5.1)
+    delayed_job_active_record (4.1.1)
+      activerecord (>= 3.0, < 5.1)
+      delayed_job (>= 3.0, < 5)
     domain_name (0.5.20161129)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.2.0)
@@ -199,7 +207,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  clockwork (~> 2.0.0)
   coffee-rails (~> 4.2)
+  delayed_job_active_record (~> 4.1.1)
   dotenv-rails (~> 2.2.0)
   jquery-rails
   kaminari (~> 1.0.1)

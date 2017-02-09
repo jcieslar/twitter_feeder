@@ -17,6 +17,9 @@ gem 'twitter',      '~> 6.1.0'
 gem 'slim',         '~> 3.0.7'
 gem 'kaminari',     '~> 1.0.1'
 
+gem 'delayed_job_active_record', '~> 4.1.1'
+gem 'clockwork',    '~> 2.0.0'
+
 group :development, :test do
   gem 'pry',        '~> 0.10.4'
   gem 'pry-rails',  '~> 0.3.4'

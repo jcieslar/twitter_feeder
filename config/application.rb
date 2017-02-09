@@ -12,6 +12,6 @@ module TwitterFeeder
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     config.time_zone = "Europe/Berlin"
-    # config.active_job.queue_adapter = :resque
+    config.active_job.queue_adapter = :delayed_job
   end
 end

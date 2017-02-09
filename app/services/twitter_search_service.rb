@@ -1,6 +1,6 @@
 class TwitterSearchService
   attr_reader :client
-  SEARCH_QUERY =  "nba" # "Aleppo"
+  SEARCH_QUERY =  "Aleppo"
   FEEDS_NUMBER = 500
 
   def initialize
