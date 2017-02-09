@@ -1,0 +1,22 @@
+h1 Tweets
+
+p= link_to "Schedules", schedules_path
+
+table
+  thead
+    tr
+      td
+      td
+      td
+      td
+      td
+  tbody
+    - @tweets.each do |tweet|
+      tr
+        td= image_tag(tweet.avatar)
+        td= tweet.external_id
+        td= tweet.username
+        td= tweet.content
+        td= tweet.tweeted_at.strftime('%Y-%m-%d %I:%M %p')
+
+= paginate @tweets

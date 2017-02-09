@@ -1,0 +1,16 @@
+h1 Schedules
+
+p= link_to 'Add Schedule', new_schedule_path
+
+table
+  thead
+    tr
+      td Time
+      td
+      td
+  tbody
+    - @schedules.each do |schedule|
+      tr
+        td= schedule.time.strftime("%I:%M %p")
+        td= link_to 'Edit', edit_schedule_path(schedule)
+        td= link_to 'Delete', schedule_path(schedule), method: :delete
