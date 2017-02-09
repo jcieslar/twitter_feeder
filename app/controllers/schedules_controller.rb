@@ -6,7 +6,7 @@ class SchedulesController < ApplicationController
   end
 
   def new
-    @schedule = Schedule.new(time: Time.now.in_time_zone)
+    @schedule = Schedule.new(time: Time.now)
   end
 
   def edit
