@@ -6,7 +6,7 @@ class SchedulesController < ApplicationController
   end
 
   def new
-    @schedule = Schedule.new
+    @schedule = Schedule.new(time: Time.now.in_time_zone)
   end
 
   def edit
@@ -49,6 +49,6 @@ class SchedulesController < ApplicationController
   end
 
   def parse_time
-    Time.new(2000,1,1,permit_params['time(4i)'], permit_params['time(5i)'])
+    Time.new(2000,1,1,permit_params['time(4i)'], permit_params['time(5i)'],0,"+01:00")
   end
 end
