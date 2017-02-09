@@ -13,8 +13,12 @@ class TwitterSearchService
   end
 
   def call
-    client
-      .search(SEARCH_QUERY, result_type: "recent", count: FEEDS_NUMBER)
-      .take(FEEDS_NUMBER)
+    begin
+      client
+        .search(SEARCH_QUERY, result_type: "recent", count: FEEDS_NUMBER)
+        .take(FEEDS_NUMBER)
+    rescue Twitter::Error => error
+      puts error
+    end
   end
 end
