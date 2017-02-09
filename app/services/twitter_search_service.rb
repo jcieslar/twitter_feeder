@@ -16,8 +16,5 @@ class TwitterSearchService
     client
       .search(SEARCH_QUERY, result_type: "recent", count: FEEDS_NUMBER)
       .take(FEEDS_NUMBER)
-      # .collect do |tweet|
-      #   OpenStrunct.new(id: tweet.id, content: tweet.text, username: tweet.user.screen_name, avatar: tweet.user.profile_image_url, tweeted_at: tweet.created_at)
-      # end
   end
 end
