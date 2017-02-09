@@ -14,9 +14,9 @@ table
     - @tweets.each do |tweet|
       tr
         td= image_tag(tweet.avatar)
-        td= tweet.external_id
-        td= tweet.username
+        td= link_to_user(tweet)
         td= tweet.content
-        td= tweet.tweeted_at.strftime('%Y-%m-%d %I:%M %p')
+        td= tweeted_date(tweet)
+        td= link_to_tweet(tweet)
 
 = paginate @tweets
